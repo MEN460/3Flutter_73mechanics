@@ -236,8 +236,6 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     if (context.read<AuthProvider>().isMechanic) {
       for (final request in _nearbyRequests) {
         // Skip if coordinates are invalid
-        if (request.longitude == null) continue;
-
         newMarkers.add(
           Marker(
             point: latlng.LatLng(request.latitude, request.longitude),
