@@ -7,7 +7,7 @@ import 'package:mechanic_discovery_app/utils/platform_utils.dart';
 import 'package:mechanic_discovery_app/utils/gradient_cache.dart';
 
 class MechanicHomeScreen extends StatelessWidget {
-  const MechanicHomeScreen({Key? key}) : super(key: key);
+  const MechanicHomeScreen({super.key});
 
   Future<void> _handleLogout(BuildContext context) async {
     final scaffold = ScaffoldMessenger.of(context);
@@ -111,12 +111,12 @@ class DashboardCard extends StatelessWidget {
   final String route;
 
   const DashboardCard({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.description,
     required this.route,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -188,11 +188,11 @@ class QuickStatsCard extends StatelessWidget {
   final double rating;
 
   const QuickStatsCard({
-    Key? key,
+    super.key,
     required this.pending,
     required this.completed,
     required this.rating,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -236,8 +236,7 @@ class StatItem extends StatelessWidget {
   final String value;
   final String label;
 
-  const StatItem({Key? key, required this.value, required this.label})
-    : super(key: key);
+  const StatItem({super.key, required this.value, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -257,7 +256,7 @@ class StatItem extends StatelessWidget {
 class HoverWrapper extends StatefulWidget {
   final Widget child;
 
-  const HoverWrapper({Key? key, required this.child}) : super(key: key);
+  const HoverWrapper({super.key, required this.child});
 
   @override
   HoverWrapperState createState() => HoverWrapperState();

@@ -4,7 +4,7 @@ import 'package:mechanic_discovery_app/providers/auth_provider.dart';
 import 'package:mechanic_discovery_app/widgets/auth_screen_header.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();

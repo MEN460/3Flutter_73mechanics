@@ -4,7 +4,7 @@ import 'package:mechanic_discovery_app/providers/auth_provider.dart';
 import 'package:mechanic_discovery_app/widgets/auth_screen_header.dart';
 
 class RegisterScreen extends StatefulWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({super.key});
 
   @override
   _RegisterScreenState createState() => _RegisterScreenState();

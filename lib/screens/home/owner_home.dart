@@ -5,7 +5,7 @@ import 'package:mechanic_discovery_app/utils/gradient_cache.dart';
 import 'package:provider/provider.dart';
 
 class OwnerHomeScreen extends StatelessWidget {
-  const OwnerHomeScreen({Key? key}) : super(key: key);
+  const OwnerHomeScreen({super.key});
 
   Future<void> _handleLogout(BuildContext context) async {
     final scaffold = ScaffoldMessenger.of(context);
@@ -40,49 +40,55 @@ class OwnerHomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              'Choose an action below to get started:',
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: Colors.grey[700],
-                fontWeight: FontWeight.w500,
-              ),
-              textAlign: TextAlign.center,
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(
+                  'Choose an action below to get started:',
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    color: Colors.grey[700],
+                    fontWeight: FontWeight.w500,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 30),
+                const DashboardCard(
+                  icon: Icons.car_repair,
+                  title: 'Request Service',
+                  description:
+                      'Request a mechanic to assist you with your car.',
+                  route: AppRoutes.requestService,
+                ),
+                const SizedBox(height: 20),
+                const DashboardCard(
+                  icon: Icons.location_on,
+                  title: 'Update Location',
+                  description:
+                      'Set your current location to find nearby mechanics.',
+                  route: AppRoutes.updateLocation,
+                ),
+                const SizedBox(height: 20),
+                const DashboardCard(
+                  icon: Icons.people,
+                  title: 'Nearby Mechanics',
+                  description: 'Find mechanics near your current location.',
+                  route: AppRoutes.nearbyMechanics,
+                ),
+                const SizedBox(height: 20),
+                const DashboardCard(
+                  icon: Icons.person,
+                  title: 'My Profile',
+                  description: 'View and manage your profile information.',
+                  route: '/car-owner-profile',
+                ),
+                const SizedBox(height: 20), // Extra space at bottom
+              ],
             ),
-            const SizedBox(height: 30),
-            const DashboardCard(
-              icon: Icons.car_repair,
-              title: 'Request Service',
-              description: 'Request a mechanic to assist you with your car.',
-              route: AppRoutes.requestService,
-            ),
-            const SizedBox(height: 20),
-            const DashboardCard(
-              icon: Icons.location_on,
-              title: 'Update Location',
-              description:
-                  'Set your current location to find nearby mechanics.',
-              route: AppRoutes.updateLocation,
-            ),
-            const SizedBox(height: 20),
-            const DashboardCard(
-              icon: Icons.people,
-              title: 'Nearby Mechanics',
-              description: 'Find mechanics near your current location.',
-              route: AppRoutes.nearbyMechanics,
-            ),
-            const SizedBox(height: 20),
-            const DashboardCard(
-              icon: Icons.person,
-              title: 'My Profile',
-              description: 'View and manage your profile information.',
-              route: '/car-owner-profile',
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -96,12 +102,12 @@ class DashboardCard extends StatelessWidget {
   final String route;
 
   const DashboardCard({
-    Key? key,
+    super.key,
     required this.icon,
     required this.title,
     required this.description,
     required this.route,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -123,8 +129,9 @@ class DashboardCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor.withAlpha((0.2 * 255).toInt()), // alpha ≈ 51
-
+                    color: Theme.of(
+                      context,
+                    ).primaryColor.withAlpha((0.2 * 255).toInt()),
                     shape: BoxShape.circle,
                   ),
                   child: Icon(

@@ -19,11 +19,11 @@ class MapScreen extends StatefulWidget {
   final Position? initialPosition;
 
   const MapScreen({
-    Key? key,
+    super.key,
     this.showMechanics = false,
     this.initialMechanics,
     this.initialPosition,
-  }) : super(key: key);
+  });
 
   @override
   _MapScreenState createState() => _MapScreenState();
@@ -903,7 +903,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.example.app',
+                userAgentPackageName: 'com.example.mechanic_discovery_app',
               ),
               MarkerLayer(markers: _markers),
             ],
@@ -939,6 +939,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
             Positioned(
               bottom: 0,
               left: 0,
+            
               right: 0,
               child: _buildRequestsMenu(),
             ),
@@ -958,11 +959,11 @@ class RequestInfoCard extends StatelessWidget {
   final VoidCallback onClose;
 
   const RequestInfoCard({
-    Key? key,
+    super.key,
     required this.request,
     required this.onAccept,
     required this.onClose,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

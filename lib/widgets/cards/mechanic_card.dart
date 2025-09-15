@@ -5,8 +5,7 @@ class MechanicCard extends StatelessWidget {
   final UserModel mechanic;
   final VoidCallback onTap;
 
-  const MechanicCard({Key? key, required this.mechanic, required this.onTap})
-    : super(key: key);
+  const MechanicCard({super.key, required this.mechanic, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

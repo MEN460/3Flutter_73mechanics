@@ -6,7 +6,7 @@ import 'package:mechanic_discovery_app/providers/auth_provider.dart';
 import 'package:mechanic_discovery_app/widgets/cards/service_request_card.dart';
 
 class NearbyRequestsScreen extends StatelessWidget {
-  const NearbyRequestsScreen({Key? key}) : super(key: key);
+  const NearbyRequestsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -5,8 +5,7 @@ class ServiceRequestCard extends StatelessWidget {
   final ServiceRequest request;
   final VoidCallback? onAccept;
 
-  const ServiceRequestCard({Key? key, required this.request, this.onAccept})
-    : super(key: key);
+  const ServiceRequestCard({super.key, required this.request, this.onAccept});
 
   Color _getStatusColor(BuildContext context, String status) {
     final colorScheme = Theme.of(context).colorScheme;

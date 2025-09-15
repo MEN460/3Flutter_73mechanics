@@ -6,8 +6,7 @@ import 'package:mechanic_discovery_app/models/user_model.dart';
 
 class MechanicProfileScreen extends StatefulWidget {
   final UserModel mechanic;
-  const MechanicProfileScreen({Key? key, required this.mechanic})
-    : super(key: key);
+  const MechanicProfileScreen({super.key, required this.mechanic});
 
   @override
   State<MechanicProfileScreen> createState() => _MechanicProfileScreenState();

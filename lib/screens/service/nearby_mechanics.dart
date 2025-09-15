@@ -10,7 +10,7 @@ import 'package:mechanic_discovery_app/services/api_endpoints.dart';
 import 'package:mechanic_discovery_app/widgets/cards/mechanic_card.dart';
 
 class NearbyMechanicsScreen extends StatefulWidget {
-  const NearbyMechanicsScreen({Key? key}) : super(key: key);
+  const NearbyMechanicsScreen({super.key});
 
   @override
   State<NearbyMechanicsScreen> createState() => _NearbyMechanicsScreenState();

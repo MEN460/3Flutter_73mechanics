@@ -6,11 +6,11 @@ class RatingBar extends StatelessWidget {
   final Color color;
 
   const RatingBar({
-    Key? key,
+    super.key,
     required this.rating,
     this.iconSize = 20,
     this.color = Colors.amber,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

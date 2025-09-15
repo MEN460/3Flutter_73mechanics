@@ -5,7 +5,7 @@ import 'package:mechanic_discovery_app/providers/service_provider.dart';
 import 'package:mechanic_discovery_app/providers/location_provider.dart';
 
 class RequestServiceScreen extends StatefulWidget {
-  const RequestServiceScreen({Key? key, this.mechanicId}) : super(key: key);
+  const RequestServiceScreen({super.key, this.mechanicId});
   final int? mechanicId;
 
   @override

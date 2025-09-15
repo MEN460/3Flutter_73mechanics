@@ -5,7 +5,7 @@ import 'package:mechanic_discovery_app/providers/location_provider.dart';
 import 'package:mechanic_discovery_app/widgets/location_picker.dart';
 
 class UpdateLocationScreen extends StatefulWidget {
-  const UpdateLocationScreen({Key? key}) : super(key: key);
+  const UpdateLocationScreen({super.key});
 
   @override
   _UpdateLocationScreenState createState() => _UpdateLocationScreenState();

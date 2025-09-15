@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:mechanic_discovery_app/providers/auth_provider.dart';
 
 class CarOwnerProfileScreen extends StatelessWidget {
-  const CarOwnerProfileScreen({Key? key}) : super(key: key);
+  const CarOwnerProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

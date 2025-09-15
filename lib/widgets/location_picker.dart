@@ -8,10 +8,10 @@ class LocationPicker extends StatefulWidget {
   final latlng.LatLng? initialLocation;
 
   const LocationPicker({
-    Key? key,
+    super.key,
     required this.onLocationSelected,
     this.initialLocation,
-  }) : super(key: key);
+  });
 
   @override
   _LocationPickerState createState() => _LocationPickerState();
@@ -49,7 +49,7 @@ class _LocationPickerState extends State<LocationPicker> {
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                userAgentPackageName: 'com.example.app',
+                userAgentPackageName: 'com.example.mechanic_discovery_app',
               ),
               MarkerLayer(
                 markers: [
